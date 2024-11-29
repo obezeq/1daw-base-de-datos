@@ -164,6 +164,24 @@
 		CONSTRAINT proyecto_unico UNIQUE (nombre, departamento_id)
 	);
 
-	--  DROP TABLE IF EXISTS ASIGNACIONES CASCADE;
-	-- CREATE TABLE ASIGNACIONES ();
+	DROP TABLE IF EXISTS ASIGNACIONES CASCADE;
+	CREATE TABLE ASIGNACIONES (
+		empleado_id INT REFERENCES EMPLEADOS(id) ON DELETE SET NULL,
+		proyecto_id INT REFERENCES PROYECTOS(id) ON DELETE CASCADE,
+		horas_semana INT CHECK (horas_semana > 0 AND horas_semana <= 40),
+		fecha_asignacion DATE DEFAULT CURRENT_DATE,
+		PRIMARY KEY (empleado_id, proyecto_id)
+	);
 	
+	ALTER TABLE EMPLEADOS ADD COLUMN fecha_nacimiento DATE CHECK (fecha_nacimiento < fecha_contratacion);
+	-- O para comprobar se puede hacer asi ^ sin el check y se comprueba asi
+	-- ADD CONSTRAINT CK_F_NAC_CONT CHECK (fecha_nacimiento < fecha_contratacion)
+	ALTER TABLE EMPLEADOS DROP COLUMN correo;
+	ALTER TABLE EMPLEADOS ALTER COLUMN salario TYPE NUMERIC(8,3);
+
+	/*-- CREACION DE VISTA
+	CREATE VIEW VISTA_SALARIO_ANDRESES AS
+	SELECT nombre,salario FROM empleados WHERE NOMBRE='Andres';*/
+
+	/*-- CREACION DE ÍNDICE
+	CREATE INDEX idx_nombre_empleado ON empleados(nombre);*/
