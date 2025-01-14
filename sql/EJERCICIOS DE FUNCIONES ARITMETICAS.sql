@@ -85,7 +85,7 @@ SELECT ENAME,
 LEAST(
     SAL,
     (SELECT COUNT(*)
-    FROM EMP
+  z  FROM EMP
     WHERE EMP.DEPTNO=E.DEPTNO)
 ) 
 AS least_value
