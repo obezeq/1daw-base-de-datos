@@ -72,4 +72,4 @@ SELECT CURRENT_TIMESTAMP AT TIME ZONE 'Europe/Madrid';
 SELECT ISFINITE('2024-12-25'::DATE);
 
 -- b) Verifica si la fecha 'infinity' es válida usando la función adecuada.
-SELECT 'infinity'::date IS NOT NULL;
+SELECT 'infinity'::DATE IS NOT NULL;
