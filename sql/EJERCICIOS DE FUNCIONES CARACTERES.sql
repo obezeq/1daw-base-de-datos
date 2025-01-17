@@ -12,8 +12,6 @@ SELECT CONCAT('Hola', ' ', 'mundo!') AS saludo;Ç
 -- b) Usando CONCAT_WS, concatena '2024', '12', y '25' con un guion (-) como separador.
 SELECT CONCAT_WS('-', '2024', '12', '25') AS fecha;
 
-
-
 -- 2. Subcadena y transformación de texto
 -- a) Extrae la palabra 'mundo' de la cadena 'Hola, mundo!' utilizando la función SUBSTRING.
 SELECT SUBSTRING('Hola, mundo!' FROM 7 FOR 5) AS palabra;
@@ -103,6 +101,5 @@ FROM EMP
 WHERE POSITION('A' IN ENAME) > 0;  -- Solo empleados cuyo nombre contiene 'A'
 
 -- e) Para todos los nombres de los empleados que contienen más de 5 caracteres, recórtalos a los primeros 5 caracteres utilizando SUBSTRING.
-
 SELECT ENAME, SUBSTRING(ENAME FROM 1 FOR 5) AS truncated_name
 FROM EMP WHERE LENGTH(ENAME) > 5;
