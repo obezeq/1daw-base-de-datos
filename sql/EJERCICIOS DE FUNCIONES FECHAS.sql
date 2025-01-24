@@ -69,7 +69,7 @@ SELECT CURRENT_TIMESTAMP AT TIME ZONE 'Europe/Madrid';
 
 -- 8. Validación de fechas
 -- a) Comprueba si la fecha '2024-12-25' es finita.
-SELECT ISFINITE('2024-12-25'::DATE);
+SELECT ISFINITE('2024-12-25'::DATE) AS comprobacion_fecha_infinita;
 
 -- b) Verifica si la fecha 'infinity' es válida usando la función adecuada.
-SELECT 'infinity'::DATE IS NOT NULL;
+SELECT ISFINITE('infinity'::DATE) AS comprobacion_fecha_valida;
