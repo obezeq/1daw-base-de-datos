@@ -103,3 +103,5 @@ WHERE POSITION('A' IN ENAME) > 0;  -- Solo empleados cuyo nombre contiene 'A'
 -- e) Para todos los nombres de los empleados que contienen más de 5 caracteres, recórtalos a los primeros 5 caracteres utilizando SUBSTRING.
 SELECT ENAME, SUBSTRING(ENAME FROM 1 FOR 5) AS truncated_name
 FROM EMP WHERE LENGTH(ENAME) > 5;
+
+-------------
