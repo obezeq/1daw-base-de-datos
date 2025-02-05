@@ -1,5 +1,7 @@
 /*
 Tarea SQL_01
+- Nota: 8.85
+- Curso: 1ºDAW B
 */
 
 /* ─────────────────────────────────────────────────────────────────────────────────────────────────── */
@@ -92,7 +94,7 @@ WHERE EJEMPLARES NOT BETWEEN 15 AND 20;
 /* ─────────────────────────────────────────────────────────────────────────────────────────────────── */
 
 /*10. **Visualizar todas las ASIGNATURAS que contengan tres letras "o" en su nombre y tengan alumnos matriculados en "Madrid".***/
-/*Puntuación: 10*/
+/*Puntuación: 8*/
 
 SELECT A.NOMBRE
 FROM ASIGNATURAS A
@@ -133,7 +135,7 @@ WHERE A.COD NOT IN (
 
 
 /*14. **Mostrar los nombres de los alumnos que tengan la misma nota que tiene "Diaz Fernandez, Maria" en "FOL" en alguna asignatura.***/
-/*Puntuación: 10*/
+/*Puntuación: 8*/
 
 SELECT DISTINCT AL.APENOM
 FROM ALUMNOS AL
