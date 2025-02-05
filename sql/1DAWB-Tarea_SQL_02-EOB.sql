@@ -76,10 +76,8 @@ SELECT RPAD (titulo, 40, '-^-') AS resultado
 FROM MISTEXTOS;
 
 -- Ejercicio 10: Títulos sin puntos/comillas (dos formas)
--- Forma 1:
-SELECT LOWER(REPLACE(REPLACE(titulo, '"', ''), '.', '')) AS titulo_limpio
-FROM MISTEXTOS;
--- Forma 2:
+-- SELECT LOWER(REPLACE(REPLACE(titulo, '"', ''), '.', '')) AS titulo_limpio
+-- FROM MISTEXTOS;
 SELECT LOWER(TRANSLATE(titulo, '".', '')) AS titulo_limpio
 FROM MISTEXTOS;
 
@@ -88,8 +86,7 @@ SELECT autor, SPLIT_PART(autor, ',', 1) AS apellido
 FROM LIBROS;
 
 -- Ejercicio 12: Autor y nombre en LIBROS
-SELECT
-autor,
+SELECT autor,
 TRIM(SPLIT_PART(autor, ',', 2)) AS nombre
 FROM LIBROS;
 
@@ -104,9 +101,7 @@ FROM LIBROS
 ORDER BY longitud;
 
 -- Ejercicio 15: Fecha formateada en NACIMIENTOS
-SELECT
-nombre,
-fechanac,
+SELECT nombre, fechanac,
 TO_CHAR(fechanac, 'DD "de" Month "de" YYYY') AS fecha_formateada
 FROM NACIMIENTOS;
 
