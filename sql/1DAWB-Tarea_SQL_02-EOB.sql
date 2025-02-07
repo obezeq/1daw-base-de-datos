@@ -72,8 +72,7 @@ SELECT TRANSLATE(titulo, '"\.', '') || '-^-^-^-^-^-^-^-^-^-^-' AS resultado
 FROM MISTEXTOS;
 
 -- Ejercicio 8: Formatear títulos de MISTEXTOS
-SELECT RPAD (titulo, 40, '-^-') AS resultado
-FROM MISTEXTOS;
+SELECT RPAD(LTRIM(RTRIM(TITULO, '" .'), '" '), 40, '-^-') FROM MISTEXTOS;
 
 -- Ejercicio 10: Títulos sin puntos/comillas (dos formas)
 -- SELECT LOWER(REPLACE(REPLACE(titulo, '"', ''), '.', '')) AS titulo_limpio
