@@ -1,7 +1,6 @@
 /*
 Tarea SQL_02
 - Curso: 1ºDAW B
-- Nombre: Ezequiel Ortega Bravo
 - Fecha: 07/02/2025
 */
 

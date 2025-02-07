@@ -1,7 +1,6 @@
 /*
 Tarea SQL_02
 - Curso: 1ºDAW B
-
 - Fecha: 07/02/2025
 - Nota: 9,63 + 1 = 10,63
 */
