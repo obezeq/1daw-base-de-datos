@@ -1,6 +1,8 @@
 /*
-Tarea SQL_01
+Tarea SQL_02
 - Curso: 1ºDAW B
+- Nombre: Ezequiel Ortega Bravo
+- Fecha: 07/02/2025
 */
 
 /* ─────────────────────────────────────────────────────────────────────────────────────────────────── */
@@ -50,7 +52,7 @@ WHERE dept_no = 30;
 -- Ejercicio 4: Temas con al menos una 'a' en LIBRERIA
 SELECT COUNT(TEMA) AS temas_con_a
 FROM LIBRERIA
-WHERE TEMA ILIKE '%a%';o
+WHERE TEMA ILIKE '%a%';
 
 -- Ejercicio 5: Temas con más ejemplares y que tengan 'e'
 SELECT tema, ejemplares
