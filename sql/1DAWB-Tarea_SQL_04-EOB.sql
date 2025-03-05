@@ -1,8 +1,12 @@
 /*
 Tarea SQL_04
 - Curso: 1ºDAW B
+<<<<<<< HEAD
 - Fecha: 18/02/2025
 - Nombre: Ezequiel Ortega Bravo
+=======
+- Fecha: 07/02/2025
+>>>>>>> 0056fe5c94e0202e2d9368f5af6997ec2848071b
 */
 
 /* ─────────────────────────────────────────────────────────────────────────────────────────────────── */
@@ -13,7 +17,11 @@ Tarea SQL_04
 -- Para hacer esta relación de ejercicios vuelve a cargar el script datos03.sql
 
 -- 1. Por cada centro y especialidad, número de profesores (incluyendo centros sin profesores)
+<<<<<<< HEAD
 SELECT
+=======
+SELECT 
+>>>>>>> 0056fe5c94e0202e2d9368f5af6997ec2848071b
     C.COD_CENTRO, 
     C.NOMBRE AS NOMBRE_CENTRO, 
     P.ESPECIALIDAD, 
