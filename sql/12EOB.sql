@@ -115,11 +115,11 @@ CREATE TABLE VOTOS(
 -- 1.- Para todos los grupos, mostrar el nombre de cada grupo
 -- , el nombre del tipo de agrupación y nombre (apellidos y nombre) del letrista del grupo.
 
-SELECT 
+SELECT
   G.NOMBRE_GR, 
   TG.NOMBRE_TP,
   M.NOMBRE_MI
-FROM GRUPOS G 
+FROM GRUPOS G
   JOIN TIPO_GRUPO TG ON G.TIPO_GR = TG.COD_TP 
   JOIN MIEMBROS M ON G.LETRISTA_GR = M.COD_MI;
 
@@ -155,7 +155,7 @@ FROM GRUPOS G
 -- 2.- Mostrar para todos los grupos del tipo 'Callejera', nombre del grupo, 
 -- nombre de cada miembro (sin apellidos).
 
-SELECT 
+SELECT
     G.NOMBRE_GR AS NOMBRE_DEL_GRUPO, 
     SPLIT_PART(M.NOMBRE_MI, ', ', 2) AS NOMBRE_CADA_MIEMBRO 
 FROM 
@@ -563,13 +563,13 @@ GROUP BY
 
 SELECT 
     SPLIT_PART(NOMBRE_MI, ', ', 1) AS APELLIDOS, 
-    SPLIT_PART(NOMBRE_MI, ', ', 2) AS NOMBRE, 
+    SPLIT_PART(NOMBRE_MI, ', ', 2) AS NOMBRE,
     EXTRACT(YEAR FROM AGE(CURRENT_DATE, FECNAC_MI)) AS EDAD 
 FROM MIEMBROS 
 WHERE GRUPO_MI = (
-  SELECT COD_GR 
-  FROM GRUPOS 
-  WHERE NOMBRE_GR = 'El grinch de Cadiz'
+  SELECT COD_GR
+  FROM GRUPOS
+  WHERE LOWER(NOMBRE_GR) = 'el grinch de cadiz'
 );
 
 -- Resultado:
